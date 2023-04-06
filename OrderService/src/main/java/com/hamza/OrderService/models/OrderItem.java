@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Primary;
 
 
 @Entity
-@Table(name= "OrderItems")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -18,15 +17,10 @@ import org.springframework.context.annotation.Primary;
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public String id;
-    @Column(name="name")
+    public Long item_id;
     public String name;
-    @Column(name="price")
     public int price;
-    @Column(name= "description")
     public String description;
-    @Column(name = "quantity")
     public int quantity;
-    public Order order;
 }
 
